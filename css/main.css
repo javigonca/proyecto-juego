@@ -1,0 +1,78 @@
+
+body {
+  background-image: url("/images/bg\ SparkBlack.png")
+}
+
+#intro {
+    height: 700px;
+    width: 800px;    
+    margin: auto;
+    padding: 1px;
+    background-image: url("/images/home\ screen\ arcade.png");
+    text-align: center;    
+    color:white;   
+    
+  }
+
+  #title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    margin-top: 230px;
+  }
+
+  button {
+  background-color: white;  
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 24px;
+  opacity: 0.6;
+  
+  }
+
+
+#score {
+  height: 0px;
+  width: 20px;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 200px;  
+  color: white;
+  
+}
+
+#points {
+  font-size: 25px;
+  border: solid;
+  padding: 5px 10px;
+  text-align: center;
+  
+}
+
+canvas {    
+    border: 1px solid white;
+    border-radius: 4px;
+    display: none;
+    margin: auto;    
+    
+  }
+
+#timeText {
+  margin-top: 100px;
+  color: rgb(144, 144, 8)
+}
+
+#time {
+  font-size: 25px;
+  border: solid;
+  padding: 5px 10px;
+  text-align: center;
+  color: rgb(144, 144, 8);
+}
+
+  

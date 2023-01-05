@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Game </title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container"> 
+      <div id="intro">
+        <h1 id="title">SPACESHIP GAME</h1>
+        <button id="start-btn">START</button> 
+        <audio id="audio"   autoplay loop src="/sound/sound intro.mp3" ></audio>             
+      </div>
+        
+        <div id="score"> 
+          <h3>SCORE</h3>
+          <span id="points"></span>
+          <h3 id="timeText">TIME</h3>
+          <span id="time"></span>
+          
+        </div>    
+
+      <canvas id="game" width="800px" height="700px">
+    </div>    
+      
+    <script src="assets/constants.js"></script>
+    <script src="assets/background.js"></script>
+    <script src="assets/backgroundEnd.js"></script>
+    <script src="assets/bullet.js"></script>
+    <script src="assets/bulletEnemy.js"></script>
+    <script src="assets/enemies.js"></script>
+    <script src="assets/obstacles.js"></script>
+    <script src="assets/enemyEnd.js"></script>
+    <script src="assets/shape.js"></script>
+    <script src="assets/game.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
