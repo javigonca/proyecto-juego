@@ -11,6 +11,7 @@ class Shape {
         this.ax = 0
         this.ay = 0
         this.tick = 0
+        this.tickAnimate = 0
         
         
         this.img = new Image()
@@ -30,6 +31,40 @@ class Shape {
       this.bullets.push(bullet)
 
       
+    }
+
+    explode() {
+      this.img.src  = "/images/explosion1.png"
+      this.img.onload = () => {
+        this.ctx.drawImage(
+          this.img, 
+          this.img.framesIndex * this.img.width / this.img.frames,
+          0,
+          this.img.width / this.img.frames,
+          this.img.height,
+          this.x,
+          this.y,
+          this.w,
+          this.h
+        )        
+           
+      }  
+      
+      //this.animate()
+        
+    }
+
+    animate() {
+      this.tickAnimate++
+  
+      if (this.tickAnimate > 5) {
+        this.tickAnimate = 0
+        this.img.frameIndex++
+  
+        if (this.img.frameIndex > this.img.frames - 1) {
+          this.img.frameIndex = 0
+        }  
+      }
     }
 
 
@@ -132,4 +167,11 @@ class Shape {
        } 
    }   
 
+   //{} []
+
+   collide(el) {
+    const collideX = el.x + el.w > this.x && el.x < this.x + this.w 
+    const collideY = el.y < this.y + this.h && el.y + el.h > this.y 
+    return collideX && collideY
+   }
 }

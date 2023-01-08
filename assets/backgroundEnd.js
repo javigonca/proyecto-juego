@@ -1,7 +1,6 @@
 class BackgroundEnd {
     constructor(ctx) {
         this.ctx = ctx
-
         this.w = this.ctx.canvas.width
         this.h = this.ctx.canvas.height
         this.x = 0
@@ -11,12 +10,10 @@ class BackgroundEnd {
 
         this.img = new Image()
         this.img.src = "/images/backgroundEnd.png"
-
         
     }
 
-    draw() {
-        
+    draw() {        
         this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
         this.ctx.drawImage(this.img, this.x, this.y - this.h, this.w, this.h)
 
@@ -30,6 +27,5 @@ class BackgroundEnd {
             this.y = 0
         }
     }
-
 
 }

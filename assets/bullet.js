@@ -1,7 +1,6 @@
 class Bullet {
     constructor(ctx, x, y) {
         this.ctx = ctx
-
         this.x = x
         this.y = y
         this.w = 50
@@ -30,13 +29,11 @@ class Bullet {
 
       }
     
-      move() {
-        
+      move() {        
         this.vx += this.ax
         this.vy += this.ay
         this.x += this.vx
-        this.y += this.vy        
-    
+        this.y += this.vy            
         
       }
 

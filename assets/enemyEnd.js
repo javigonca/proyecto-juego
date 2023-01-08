@@ -1,9 +1,8 @@
 class EnemyEnd {
     constructor(ctx) {
         this.ctx = ctx
-
         this.x = 50
-        this.y = 50
+        this.y = 10
         this.w = 150
         this.h = 150
         this.vx = 2
@@ -22,8 +21,7 @@ class EnemyEnd {
         const x = this.x + this.w / 2.8
         const y = this.y + this.h / 3     
         const bullet = new BulletEnemy(this.ctx, x, y)
-        this.bullets.push(bullet)
-  
+        this.bullets.push(bullet)  
         
       }
 
@@ -49,17 +47,12 @@ class EnemyEnd {
             this.audioShoot.play()        
             //this.enemies.push(new Enemies(this.ctx))
                                     
-        }
-          
-        
-          
+        }        
     }
 
-    move() {          
-        
+    move() {                 
         this.x += this.vx
         this.y += this.vy
-
 
         if (this.x < 0) {
             this.x = 0

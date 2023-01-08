@@ -1,4 +1,4 @@
-class Background {
+class BackgroundUpLevel {
     constructor(ctx) {
         this.ctx = ctx
         this.w = this.ctx.canvas.width
@@ -9,11 +9,13 @@ class Background {
         this.vy = 1
 
         this.img = new Image()
-        this.img.src = "/images/bg space nebula.png"
+        this.img.src = "/images/bgspace.png"
+
         
     }
 
-    draw() {        
+    draw() {
+        
         this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
         this.ctx.drawImage(this.img, this.x, this.y - this.h, this.w, this.h)
 
@@ -27,5 +29,6 @@ class Background {
             this.y = 0
         }
     }
+
 
 }

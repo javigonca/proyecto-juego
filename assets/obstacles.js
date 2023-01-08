@@ -2,8 +2,8 @@ class Obstacles {
     constructor(ctx) {
         this.ctx = ctx
 
-        this.x = Math.random() * this.ctx.canvas.width
-        this.y = 0
+        this.x = Math.random() * 200
+        this.y = Math.random() * 200
         this.w = 75
         this.h = 70
         this.vx = 1
